@@ -17,7 +17,7 @@ The script scans the given markdown file for all available headers (which are de
 - dots are removed
 
 ## Example
-Let's take a file called _toc_example.md_ with following content (this file is also available in the _examples/_ directory):
+Let's take a file called _toc_example.md_ with following content (this file is also available in the _example/_ directory):
 ```markdown
 # Table of content example
 Some meaningful text here..
@@ -32,16 +32,16 @@ More text..
 Text, text, text
 ```
 
-Invoking the script with ```sh  python create_git_toc.py --md_file toc_example.md``` produces following output:
+Invoking the script with ```python create_git_toc.py --md_file example/toc_example.md``` produces following output:
 ```markdown
 * [Table of content example](#table-of-content-example)
     * [Header in level 1](#header-in-level-1)
         * [Header in level 1.2](#header-in-level-12)
     * [Another Header in level 1](#another-header-in-level-1)
 ```
-See _toc_example_with_toc.md_ in the _examples/_ directory for how it could look like.
+See _toc_example_with_toc.md_ in the _example/_ directory for how it could look like.
 
-Reducing the depth-level to 1 by invoking the script with ```sh  python create_git_toc.py --md_file toc_example.md --max_depth 2``` produces following output:
+Reducing the depth-level to 1 by invoking the script with ```python create_git_toc.py --md_file example/toc_example.md --max_depth 2``` produces following output:
 ```markdown
 * [Table of content example](#table-of-content-example)
     * [Header in level 1](#header-in-level-1)
